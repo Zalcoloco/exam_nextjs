@@ -34,6 +34,11 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
+        <footer className="mx-auto max-w-5xl px-5 py-6">
+          <Link className="underline" href="/mentions-legales">
+            Mentions légales
+          </Link>
+        </footer>
       </body>
     </html>
   );

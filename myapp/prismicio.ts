@@ -18,6 +18,7 @@ export const repositoryName =
  * {@link https://prismic.io/docs/route-resolver#route-resolver}
  */
 const routes: Route[] = [
+  { type: "mention", path: "/mentions-legales" },
   { type: "single", path: "/offres/:uid" },
 ];
 

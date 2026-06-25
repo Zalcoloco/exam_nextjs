@@ -68,7 +68,7 @@ export default async function TechnologyPage({ params }: Props) {
           })}
         </div>
       ) : (
-        <p>Aucune offre disponible.</p>
+        <p className="mt-8">Aucune offre disponible.</p>
       )}
     </main>
   );

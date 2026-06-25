@@ -1,37 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { usePinnedOffersStore } from "./pinnedOffersStore";
 
 type Props = {
   uid: string;
 };
 
-const storageKey = "pinnedOffers";
-
-function getPinnedOffers() {
-  return JSON.parse(localStorage.getItem(storageKey) ?? "[]") as string[];
-}
-
 export default function PinButton({ uid }: Props) {
-  const [isPinned, setIsPinned] = useState(() =>
-    getPinnedOffers().includes(uid),
+  const pinnedOffers = usePinnedOffersStore((state) => state.pinnedOffers);
+  const togglePinnedOffer = usePinnedOffersStore(
+    (state) => state.togglePinnedOffer,
   );
-
-  function togglePinnedOffer() {
-    const pinnedOffers = getPinnedOffers();
-    const nextPinnedOffers = isPinned
-      ? pinnedOffers.filter((pinnedUid) => pinnedUid !== uid)
-      : [...pinnedOffers, uid];
-
-    localStorage.setItem(storageKey, JSON.stringify(nextPinnedOffers));
-    setIsPinned(!isPinned);
-  }
+  const isPinned = pinnedOffers.includes(uid);
 
   return (
     <button
       type="button"
-      onClick={togglePinnedOffer}
+      onClick={() => togglePinnedOffer(uid)}
       aria-label={isPinned ? "Retirer du profil" : "Épingler dans le profil"}
       title={isPinned ? "Retirer du profil" : "Épingler dans le profil"}
     >

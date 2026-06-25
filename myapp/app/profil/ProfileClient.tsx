@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useSyncExternalStore } from "react";
+import { usePinnedOffersStore } from "../offres/pinnedOffersStore";
 
 type Job = {
   uid: string;
@@ -13,24 +13,8 @@ type Props = {
   jobs: Job[];
 };
 
-const storageKey = "pinnedOffers";
-
-function subscribe(callback: () => void) {
-  window.addEventListener("storage", callback);
-
-  return () => {
-    window.removeEventListener("storage", callback);
-  };
-}
-
-function getSnapshot() {
-  return localStorage.getItem(storageKey) ?? "[]";
-}
-
 export default function ProfileClient({ jobs }: Props) {
-  const pinnedOffers = JSON.parse(
-    useSyncExternalStore(subscribe, getSnapshot, () => "[]"),
-  ) as string[];
+  const pinnedOffers = usePinnedOffersStore((state) => state.pinnedOffers);
   const pinnedJobs = jobs.filter((job) => pinnedOffers.includes(job.uid));
 
   return (
