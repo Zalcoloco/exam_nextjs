@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createClient } from "../../../prismicio";
+import PinButton from "./PinButton";
 
 type Props = {
   params: Promise<{ uid: string }>;
@@ -50,6 +51,7 @@ export default async function JobPage({ params }: Props) {
       <h1>{asText(slice.primary.title) || "Offre sans titre"}</h1>
       {slice.primary.date ? <p>{slice.primary.date}</p> : null}
       {technologies ? <p>{technologies}</p> : null}
+      <PinButton uid={uid} />
       <PrismicRichText field={slice.primary.description} />
     </main>
   );

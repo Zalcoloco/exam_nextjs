@@ -75,7 +75,7 @@ export default async function JobsPage() {
                   <p>{technologies}</p>
                   {description ? <p>{description}</p> : null}
                   <Link href={job.url ?? `/offres/${job.uid}`}>
-                    {"Voir l'offre"}
+                    Voir l&apos;offre
                   </Link>
                 </article>
               );
