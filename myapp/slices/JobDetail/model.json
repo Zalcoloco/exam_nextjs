@@ -1,0 +1,81 @@
+{
+  "id": "job_detail",
+  "type": "SharedSlice",
+  "name": "JobDetail",
+  "description": "Job posting detail with title, date, technologies, description, and application form",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default job detail variation",
+      "imageUrl": "",
+      "primary": {
+        "ctaLabel": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Label",
+            "placeholder": "e.g., < Voir toutes les offres"
+          }
+        },
+        "ctaLink": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link",
+            "allowText": false,
+            "select": null
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Job Title",
+            "single": "heading1"
+          }
+        },
+        "postDate": {
+          "type": "Date",
+          "config": {
+            "label": "Post Date"
+          }
+        },
+        "technologies": {
+          "type": "Group",
+          "config": {
+            "label": "Technologies",
+            "fields": {
+              "tech": {
+                "type": "Text",
+                "config": {
+                  "label": "Technology Name"
+                }
+              }
+            }
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Job Description",
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "applicationLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Application Textarea Placeholder",
+            "placeholder": "e.g., Postuler à cette offre ..."
+          }
+        },
+        "submitButtonLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button Label",
+            "placeholder": "e.g., Envoyer"
+          }
+        }
+      }
+    }
+  ]
+}

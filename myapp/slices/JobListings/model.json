@@ -1,0 +1,98 @@
+{
+  "id": "job_listings",
+  "type": "SharedSlice",
+  "name": "JobListings",
+  "description": "A slice displaying job offerings and application history",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "offerings_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Offerings Section Title",
+            "single": "heading1"
+          }
+        },
+        "offerings_items": {
+          "type": "Group",
+          "config": {
+            "label": "Job Offerings",
+            "fields": {
+              "job_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Job Title"
+                }
+              },
+              "job_id": {
+                "type": "Text",
+                "config": {
+                  "label": "Job ID"
+                }
+              },
+              "technologies": {
+                "type": "Text",
+                "config": {
+                  "label": "Technologies"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "multi": "paragraph,strong,em,hyperlink"
+                }
+              }
+            }
+          }
+        },
+        "history_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "History Section Title",
+            "single": "heading1"
+          }
+        },
+        "history_items": {
+          "type": "Group",
+          "config": {
+            "label": "Application History",
+            "fields": {
+              "job_id": {
+                "type": "Text",
+                "config": {
+                  "label": "Job ID"
+                }
+              },
+              "job_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Job Title"
+                }
+              },
+              "technologies": {
+                "type": "Text",
+                "config": {
+                  "label": "Technologies"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "multi": "paragraph,strong,em,hyperlink"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

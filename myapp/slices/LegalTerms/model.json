@@ -1,0 +1,50 @@
+{
+  "id": "legal_terms",
+  "type": "SharedSlice",
+  "name": "LegalTerms",
+  "description": "A slice for displaying legal terms and mentions légales content with sections",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation for legal terms",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "single": "heading1",
+            "placeholder": "Enter page heading"
+          }
+        },
+        "sections": {
+          "type": "Group",
+          "config": {
+            "label": "Sections",
+            "fields": {
+              "section_title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Section Title",
+                  "single": "heading2",
+                  "placeholder": "Enter section title"
+                }
+              },
+              "section_content": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Section Content",
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "placeholder": "Enter section content"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

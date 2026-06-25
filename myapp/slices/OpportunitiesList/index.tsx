@@ -25,8 +25,8 @@ const OpportunitiesList: FC<OpportunitiesListProps> = ({ slice }) => {
 
       <PrismicNextLink field={slice.primary.viewAllLink} />
 
-      {slice.primary.opportunities.map((item) => (
-        <div key={item.jobTitle}>
+      {slice.primary.opportunities.map((item, index) => (
+        <div key={index}>
           <PrismicRichText field={item.jobTitle} />
           <span>{asDate(item.postingDate)?.toLocaleDateString()}</span>
           <span>{item.technologies}</span>

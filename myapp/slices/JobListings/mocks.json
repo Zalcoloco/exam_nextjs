@@ -1,0 +1,127 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"offerings_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Eventually"
+						}
+					}
+				]
+			},
+			"offerings_items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"job_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "cup",
+									"type": "Text"
+								}
+							],
+							[
+								"job_id",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "grandmother",
+									"type": "Text"
+								}
+							],
+							[
+								"technologies",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "get",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Aute ex anim ullamco do dolore duis exercitation."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"history_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Chemical"
+						}
+					}
+				]
+			},
+			"history_items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"job_id",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sweet",
+									"type": "Text"
+								}
+							],
+							[
+								"job_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sky",
+									"type": "Text"
+								}
+							],
+							[
+								"technologies",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "choose",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Fugiat pariatur sunt enim."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

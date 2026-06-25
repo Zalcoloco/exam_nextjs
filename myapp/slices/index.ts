@@ -4,6 +4,10 @@ import dynamic from "next/dynamic";
 
 export const components = {
   job_board: dynamic(() => import("./JobBoard")),
+  job_detail: dynamic(() => import("./JobDetail")),
+  job_listings: dynamic(() => import("./JobListings")),
+  job_posting: dynamic(() => import("./JobPosting")),
+  legal_terms: dynamic(() => import("./LegalTerms")),
   opportunities_list: dynamic(() => import("./OpportunitiesList")),
   opportunities_section: dynamic(() => import("./OpportunitiesSection")),
 };

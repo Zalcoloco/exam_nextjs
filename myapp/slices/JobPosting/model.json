@@ -1,0 +1,67 @@
+{
+  "id": "job_posting",
+  "type": "SharedSlice",
+  "name": "JobPosting",
+  "description": "Job posting slice with title, date, technologies, description, and application form",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default job posting variation",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "single": "heading1"
+          }
+        },
+        "date": {
+          "type": "Date",
+          "config": {
+            "label": "Date"
+          }
+        },
+        "technologies": {
+          "type": "Group",
+          "config": {
+            "label": "Technologies",
+            "fields": {
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Technology Name"
+                }
+              }
+            }
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "applicationText": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Application Text",
+            "single": "paragraph",
+            "placeholder": "Postuler à cette offre ..."
+          }
+        },
+        "submitButtonText": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button Text",
+            "placeholder": "Envoyer"
+          }
+        }
+      }
+    }
+  ]
+}

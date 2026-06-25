@@ -191,6 +191,193 @@ interface ListeDocumentData {
 export type ListeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<ListeDocumentData>, "liste", Lang>;
 
+type MentionDocumentDataSlicesSlice = LegalTermsSlice;
+
+/**
+ * Content for mention documents
+ */
+interface MentionDocumentData {
+  /**
+   * Slice Zone field in *mention*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mention.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<MentionDocumentDataSlicesSlice>; /**
+   * Meta Title field in *mention*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: mention.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *mention*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: mention.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *mention*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mention.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * mention document from Prismic
+ *
+ * - **API ID**: `mention`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type MentionDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<MentionDocumentData>,
+    "mention",
+    Lang
+  >;
+
+type ProfilDocumentDataSlicesSlice = JobListingsSlice;
+
+/**
+ * Content for profil documents
+ */
+interface ProfilDocumentData {
+  /**
+   * Slice Zone field in *profil*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: profil.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<ProfilDocumentDataSlicesSlice>; /**
+   * Meta Title field in *profil*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: profil.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *profil*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: profil.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *profil*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: profil.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * profil document from Prismic
+ *
+ * - **API ID**: `profil`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProfilDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<ProfilDocumentData>, "profil", Lang>;
+
+type SingleDocumentDataSlicesSlice = JobPostingSlice;
+
+/**
+ * Content for single documents
+ */
+interface SingleDocumentData {
+  /**
+   * Slice Zone field in *single*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<SingleDocumentDataSlicesSlice>; /**
+   * Meta Title field in *single*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: single.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *single*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: single.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *single*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * single document from Prismic
+ *
+ * - **API ID**: `single`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SingleDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<SingleDocumentData>, "single", Lang>;
+
 type TagDocumentDataSlicesSlice = OpportunitiesListSlice;
 
 /**
@@ -252,7 +439,13 @@ interface TagDocumentData {
 export type TagDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<TagDocumentData>, "tag", Lang>;
 
-export type AllDocumentTypes = HomeDocument | ListeDocument | TagDocument;
+export type AllDocumentTypes =
+  | HomeDocument
+  | ListeDocument
+  | MentionDocument
+  | ProfilDocument
+  | SingleDocument
+  | TagDocument;
 
 /**
  * Item in *JobBoard → Default → Primary → Job Cards*
@@ -366,6 +559,507 @@ type JobBoardSliceVariation = JobBoardSliceDefault;
 export type JobBoardSlice = prismic.SharedSlice<
   "job_board",
   JobBoardSliceVariation
+>;
+
+/**
+ * Item in *JobDetail → Default → Primary → Technologies*
+ */
+export interface JobDetailSliceDefaultPrimaryTechnologiesItem {
+  /**
+   * Technology Name field in *JobDetail → Default → Primary → Technologies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_detail.default.primary.technologies[].tech
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  tech: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *JobDetail → Default → Primary*
+ */
+export interface JobDetailSliceDefaultPrimary {
+  /**
+   * CTA Label field in *JobDetail → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., < Voir toutes les offres
+   * - **API ID Path**: job_detail.default.primary.ctaLabel
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  ctaLabel: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *JobDetail → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_detail.default.primary.ctaLink
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  ctaLink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Job Title field in *JobDetail → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_detail.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Post Date field in *JobDetail → Default → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_detail.default.primary.postDate
+   * - **Documentation**: https://prismic.io/docs/fields/date
+   */
+  postDate: prismic.DateField;
+
+  /**
+   * Technologies field in *JobDetail → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_detail.default.primary.technologies[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  technologies: prismic.GroupField<
+    Simplify<JobDetailSliceDefaultPrimaryTechnologiesItem>
+  >;
+
+  /**
+   * Job Description field in *JobDetail → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_detail.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Application Textarea Placeholder field in *JobDetail → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., Postuler à cette offre ...
+   * - **API ID Path**: job_detail.default.primary.applicationLabel
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  applicationLabel: prismic.KeyTextField;
+
+  /**
+   * Submit Button Label field in *JobDetail → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., Envoyer
+   * - **API ID Path**: job_detail.default.primary.submitButtonLabel
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  submitButtonLabel: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for JobDetail Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default job detail variation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type JobDetailSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<JobDetailSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *JobDetail*
+ */
+type JobDetailSliceVariation = JobDetailSliceDefault;
+
+/**
+ * JobDetail Shared Slice
+ *
+ * - **API ID**: `job_detail`
+ * - **Description**: Job posting detail with title, date, technologies, description, and application form
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type JobDetailSlice = prismic.SharedSlice<
+  "job_detail",
+  JobDetailSliceVariation
+>;
+
+/**
+ * Item in *JobListings → Default → Primary → Job Offerings*
+ */
+export interface JobListingsSliceDefaultPrimaryOfferingsItemsItem {
+  /**
+   * Job Title field in *JobListings → Default → Primary → Job Offerings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.offerings_items[].job_title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  job_title: prismic.KeyTextField;
+
+  /**
+   * Job ID field in *JobListings → Default → Primary → Job Offerings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.offerings_items[].job_id
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  job_id: prismic.KeyTextField;
+
+  /**
+   * Technologies field in *JobListings → Default → Primary → Job Offerings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.offerings_items[].technologies
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  technologies: prismic.KeyTextField;
+
+  /**
+   * Description field in *JobListings → Default → Primary → Job Offerings*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.offerings_items[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Item in *JobListings → Default → Primary → Application History*
+ */
+export interface JobListingsSliceDefaultPrimaryHistoryItemsItem {
+  /**
+   * Job ID field in *JobListings → Default → Primary → Application History*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.history_items[].job_id
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  job_id: prismic.KeyTextField;
+
+  /**
+   * Job Title field in *JobListings → Default → Primary → Application History*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.history_items[].job_title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  job_title: prismic.KeyTextField;
+
+  /**
+   * Technologies field in *JobListings → Default → Primary → Application History*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.history_items[].technologies
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  technologies: prismic.KeyTextField;
+
+  /**
+   * Description field in *JobListings → Default → Primary → Application History*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.history_items[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *JobListings → Default → Primary*
+ */
+export interface JobListingsSliceDefaultPrimary {
+  /**
+   * Offerings Section Title field in *JobListings → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.offerings_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  offerings_title: prismic.RichTextField;
+
+  /**
+   * Job Offerings field in *JobListings → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.offerings_items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  offerings_items: prismic.GroupField<
+    Simplify<JobListingsSliceDefaultPrimaryOfferingsItemsItem>
+  >;
+
+  /**
+   * History Section Title field in *JobListings → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.history_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  history_title: prismic.RichTextField;
+
+  /**
+   * Application History field in *JobListings → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_listings.default.primary.history_items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  history_items: prismic.GroupField<
+    Simplify<JobListingsSliceDefaultPrimaryHistoryItemsItem>
+  >;
+}
+
+/**
+ * Default variation for JobListings Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default variation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type JobListingsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<JobListingsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *JobListings*
+ */
+type JobListingsSliceVariation = JobListingsSliceDefault;
+
+/**
+ * JobListings Shared Slice
+ *
+ * - **API ID**: `job_listings`
+ * - **Description**: A slice displaying job offerings and application history
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type JobListingsSlice = prismic.SharedSlice<
+  "job_listings",
+  JobListingsSliceVariation
+>;
+
+/**
+ * Item in *JobPosting → Default → Primary → Technologies*
+ */
+export interface JobPostingSliceDefaultPrimaryTechnologiesItem {
+  /**
+   * Technology Name field in *JobPosting → Default → Primary → Technologies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_posting.default.primary.technologies[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *JobPosting → Default → Primary*
+ */
+export interface JobPostingSliceDefaultPrimary {
+  /**
+   * Title field in *JobPosting → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_posting.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Date field in *JobPosting → Default → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_posting.default.primary.date
+   * - **Documentation**: https://prismic.io/docs/fields/date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Technologies field in *JobPosting → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_posting.default.primary.technologies[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  technologies: prismic.GroupField<
+    Simplify<JobPostingSliceDefaultPrimaryTechnologiesItem>
+  >;
+
+  /**
+   * Description field in *JobPosting → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_posting.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Application Text field in *JobPosting → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Postuler à cette offre ...
+   * - **API ID Path**: job_posting.default.primary.applicationText
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  applicationText: prismic.RichTextField;
+
+  /**
+   * Submit Button Text field in *JobPosting → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Envoyer
+   * - **API ID Path**: job_posting.default.primary.submitButtonText
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  submitButtonText: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for JobPosting Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default job posting variation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type JobPostingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<JobPostingSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *JobPosting*
+ */
+type JobPostingSliceVariation = JobPostingSliceDefault;
+
+/**
+ * JobPosting Shared Slice
+ *
+ * - **API ID**: `job_posting`
+ * - **Description**: Job posting slice with title, date, technologies, description, and application form
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type JobPostingSlice = prismic.SharedSlice<
+  "job_posting",
+  JobPostingSliceVariation
+>;
+
+/**
+ * Item in *LegalTerms → Default → Primary → Sections*
+ */
+export interface LegalTermsSliceDefaultPrimarySectionsItem {
+  /**
+   * Section Title field in *LegalTerms → Default → Primary → Sections*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter section title
+   * - **API ID Path**: legal_terms.default.primary.sections[].section_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  section_title: prismic.RichTextField;
+
+  /**
+   * Section Content field in *LegalTerms → Default → Primary → Sections*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter section content
+   * - **API ID Path**: legal_terms.default.primary.sections[].section_content
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  section_content: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *LegalTerms → Default → Primary*
+ */
+export interface LegalTermsSliceDefaultPrimary {
+  /**
+   * Heading field in *LegalTerms → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter page heading
+   * - **API ID Path**: legal_terms.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Sections field in *LegalTerms → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: legal_terms.default.primary.sections[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  sections: prismic.GroupField<
+    Simplify<LegalTermsSliceDefaultPrimarySectionsItem>
+  >;
+}
+
+/**
+ * Default variation for LegalTerms Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default variation for legal terms
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type LegalTermsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<LegalTermsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *LegalTerms*
+ */
+type LegalTermsSliceVariation = LegalTermsSliceDefault;
+
+/**
+ * LegalTerms Shared Slice
+ *
+ * - **API ID**: `legal_terms`
+ * - **Description**: A slice for displaying legal terms and mentions légales content with sections
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type LegalTermsSlice = prismic.SharedSlice<
+  "legal_terms",
+  LegalTermsSliceVariation
 >;
 
 /**
@@ -661,6 +1355,15 @@ declare module "@prismicio/client" {
       ListeDocument,
       ListeDocumentData,
       ListeDocumentDataSlicesSlice,
+      MentionDocument,
+      MentionDocumentData,
+      MentionDocumentDataSlicesSlice,
+      ProfilDocument,
+      ProfilDocumentData,
+      ProfilDocumentDataSlicesSlice,
+      SingleDocument,
+      SingleDocumentData,
+      SingleDocumentDataSlicesSlice,
       TagDocument,
       TagDocumentData,
       TagDocumentDataSlicesSlice,
@@ -670,6 +1373,27 @@ declare module "@prismicio/client" {
       JobBoardSliceDefaultPrimary,
       JobBoardSliceVariation,
       JobBoardSliceDefault,
+      JobDetailSlice,
+      JobDetailSliceDefaultPrimaryTechnologiesItem,
+      JobDetailSliceDefaultPrimary,
+      JobDetailSliceVariation,
+      JobDetailSliceDefault,
+      JobListingsSlice,
+      JobListingsSliceDefaultPrimaryOfferingsItemsItem,
+      JobListingsSliceDefaultPrimaryHistoryItemsItem,
+      JobListingsSliceDefaultPrimary,
+      JobListingsSliceVariation,
+      JobListingsSliceDefault,
+      JobPostingSlice,
+      JobPostingSliceDefaultPrimaryTechnologiesItem,
+      JobPostingSliceDefaultPrimary,
+      JobPostingSliceVariation,
+      JobPostingSliceDefault,
+      LegalTermsSlice,
+      LegalTermsSliceDefaultPrimarySectionsItem,
+      LegalTermsSliceDefaultPrimary,
+      LegalTermsSliceVariation,
+      LegalTermsSliceDefault,
       OpportunitiesListSlice,
       OpportunitiesListSliceDefaultPrimaryOpportunitiesItem,
       OpportunitiesListSliceDefaultPrimary,

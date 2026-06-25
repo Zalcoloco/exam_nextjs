@@ -1,0 +1,77 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"ctaLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "nor",
+				"type": "Text"
+			},
+			"ctaLink": {
+				"__TYPE__": "LinkContent",
+				"key": "dbf1f91b-4594-4303-8ad0-c77acd69118d",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Pretty"
+						}
+					}
+				]
+			},
+			"postDate": {
+				"__TYPE__": "FieldContent",
+				"type": "Date",
+				"value": "2013-09-23"
+			},
+			"technologies": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"tech",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "horn",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nulla pariatur quis anim proident duis deserunt amet amet magna. Lorem enim nulla labore duis fugiat dolore velit esse voluptate do deserunt velit id esse Lorem. Ad veniam velit laboris officia consectetur nostrud ut officia laborum et officia nulla deserunt."
+						}
+					}
+				]
+			},
+			"applicationLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "forgot",
+				"type": "Text"
+			},
+			"submitButtonLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "back",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

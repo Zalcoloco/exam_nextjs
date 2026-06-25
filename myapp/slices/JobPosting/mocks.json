@@ -1,0 +1,70 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Tomorrow"
+						}
+					}
+				]
+			},
+			"date": {
+				"__TYPE__": "FieldContent",
+				"type": "Date",
+				"value": "2026-05-23"
+			},
+			"technologies": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "stove",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Elit voluptate qui aute. Elit incididunt officia aute eiusmod in occaecat enim dolor cupidatat ea culpa veniam voluptate sit sunt. Ex enim duis dolore velit amet sunt."
+						}
+					}
+				]
+			},
+			"applicationText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Irure sint duis ut voluptate ullamco Lorem fugiat reprehenderit sint fugiat ullamco."
+						}
+					}
+				]
+			},
+			"submitButtonText": {
+				"__TYPE__": "FieldContent",
+				"value": "struggle",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
