@@ -46,7 +46,7 @@ export default async function JobPage({ params }: Props) {
 
   return (
     <main>
-      <Link href="/">Retour aux offres</Link>
+      <Link href="/offres">Retour aux offres</Link>
       <h1>{asText(slice.primary.title) || "Offre sans titre"}</h1>
       {slice.primary.date ? <p>{slice.primary.date}</p> : null}
       {technologies ? <p>{technologies}</p> : null}
