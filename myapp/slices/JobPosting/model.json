@@ -54,6 +54,13 @@
             "placeholder": "Postuler à cette offre ..."
           }
         },
+        "email_admin": {
+          "type": "Text",
+          "config": {
+            "label": "Email Admin",
+            "placeholder": ""
+          }
+        },
         "submitButtonText": {
           "type": "Text",
           "config": {
@@ -61,7 +68,8 @@
             "placeholder": "Envoyer"
           }
         }
-      }
+      },
+      "items": {}
     }
   ]
 }

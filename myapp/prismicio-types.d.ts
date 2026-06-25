@@ -940,6 +940,16 @@ export interface JobPostingSliceDefaultPrimary {
   applicationText: prismic.RichTextField;
 
   /**
+   * Email Admin field in *JobPosting → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: job_posting.default.primary.email_admin
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  email_admin: prismic.KeyTextField;
+
+  /**
    * Submit Button Text field in *JobPosting → Default → Primary*
    *
    * - **Field Type**: Text

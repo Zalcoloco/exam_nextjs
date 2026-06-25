@@ -63,6 +63,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "struggle",
 				"type": "Text"
+			},
+			"email_admin": {
+				"__TYPE__": "FieldContent",
+				"value": "finest",
+				"type": "Text"
 			}
 		},
 		"items": []
