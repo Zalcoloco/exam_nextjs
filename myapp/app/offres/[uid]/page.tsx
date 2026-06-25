@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createClient } from "../../../prismicio";
-import PinButton from "./PinButton";
 
 type Props = {
   params: Promise<{ uid: string }>;
@@ -46,13 +45,18 @@ export default async function JobPage({ params }: Props) {
     .join(", ");
 
   return (
-    <main>
-      <Link href="/offres">Retour aux offres</Link>
-      <h1>{asText(slice.primary.title) || "Offre sans titre"}</h1>
+    <main className="mx-auto max-w-5xl px-5 py-10">
+      <Link className="underline" href="/offres">
+        Retour aux offres
+      </Link>
+      <h1 className="mt-6 text-3xl font-semibold">
+        {asText(slice.primary.title) || "Offre sans titre"}
+      </h1>
       {slice.primary.date ? <p>{slice.primary.date}</p> : null}
       {technologies ? <p>{technologies}</p> : null}
-      <PinButton uid={uid} />
-      <PrismicRichText field={slice.primary.description} />
+      <div className="mt-6">
+        <PrismicRichText field={slice.primary.description} />
+      </div>
     </main>
   );
 }

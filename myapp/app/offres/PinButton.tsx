@@ -32,8 +32,10 @@ export default function PinButton({ uid }: Props) {
     <button
       type="button"
       onClick={togglePinnedOffer}
+      aria-label={isPinned ? "Retirer du profil" : "Épingler dans le profil"}
+      title={isPinned ? "Retirer du profil" : "Épingler dans le profil"}
     >
-      <Image src="/save.svg" alt="" width={24} height={24} style={{cursor: "pointer"}} />
+      <Image src="/save.svg" alt="" width={24} height={24} />
     </button>
   );
 }

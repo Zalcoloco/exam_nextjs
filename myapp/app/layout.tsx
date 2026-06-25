@@ -16,16 +16,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body><header style={{ backgroundColor: "black" }}>
-        <nav>
-          <Link href="/">
-            <Image src="/logo.svg" alt="DEV" width={95} height={24} priority />
-          </Link>
-          <Link href="/profil">
-            <Image src="/login.svg" alt="Profil" width={24} height={24} />
-          </Link>
-        </nav>
-      </header>{children}</body>
+      <body>
+        <header className="bg-black">
+          <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt="DEV"
+                width={95}
+                height={24}
+                priority
+              />
+            </Link>
+            <Link href="/profil" aria-label="Profil">
+              <Image src="/login.svg" alt="" width={24} height={24} />
+            </Link>
+          </nav>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

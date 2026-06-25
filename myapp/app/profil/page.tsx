@@ -29,8 +29,10 @@ export default async function ProfilePage() {
   });
 
   return (
-    <main>
-      <Link href="/">Accueil</Link>
+    <main className="mx-auto max-w-5xl px-5 py-10">
+      <Link className="underline" href="/">
+        Accueil
+      </Link>
       <ProfileClient jobs={jobLinks} />
     </main>
   );
