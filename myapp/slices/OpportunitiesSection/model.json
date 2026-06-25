@@ -1,0 +1,77 @@
+{
+  "id": "opportunities_section",
+  "type": "SharedSlice",
+  "name": "OpportunitiesSection",
+  "description": "A section displaying job opportunities with a hero image, title, repeating job cards, and a call-to-action button",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation of the opportunities section",
+      "imageUrl": "",
+      "primary": {
+        "heroImage": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image"
+          }
+        },
+        "sectionTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section Title",
+            "single": "heading2"
+          }
+        },
+        "jobCards": {
+          "type": "Group",
+          "config": {
+            "label": "Job Cards",
+            "fields": {
+              "jobTitle": {
+                "type": "Text",
+                "config": {
+                  "label": "Job Title"
+                }
+              },
+              "jobDate": {
+                "type": "Date",
+                "config": {
+                  "label": "Job Date"
+                }
+              },
+              "technologies": {
+                "type": "Text",
+                "config": {
+                  "label": "Technologies"
+                }
+              },
+              "jobDescription": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Job Description",
+                  "multi": "paragraph,strong,em,hyperlink"
+                }
+              }
+            }
+          }
+        },
+        "ctaButtonText": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Button Text"
+          }
+        },
+        "ctaButtonLink": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Button Link",
+            "select": "web"
+          }
+        }
+      }
+    }
+  ]
+}

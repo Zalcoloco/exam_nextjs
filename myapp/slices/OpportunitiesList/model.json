@@ -1,0 +1,75 @@
+{
+  "id": "opportunities_list",
+  "type": "SharedSlice",
+  "name": "OpportunitiesList",
+  "description": "A section displaying job opportunities in a grid layout with filtering and viewing options",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "single": "heading2",
+            "placeholder": "e.g., Techno 1"
+          }
+        },
+        "opportunityCount": {
+          "type": "Number",
+          "config": {
+            "label": "Opportunity Count"
+          }
+        },
+        "viewAllLink": {
+          "type": "Link",
+          "config": {
+            "label": "View All Link",
+            "allowText": true,
+            "select": null
+          }
+        },
+        "opportunities": {
+          "type": "Group",
+          "config": {
+            "label": "Opportunities",
+            "fields": {
+              "jobTitle": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Job Title",
+                  "single": "heading3"
+                }
+              },
+              "postingDate": {
+                "type": "Date",
+                "config": {
+                  "label": "Posting Date"
+                }
+              },
+              "technologies": {
+                "type": "Text",
+                "config": {
+                  "label": "Technologies",
+                  "placeholder": "e.g., Techno1, Techno2, Techno3"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "multi": "paragraph,strong,em,hyperlink"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Limited"
+						}
+					}
+				]
+			},
+			"opportunityCount": {
+				"__TYPE__": "FieldContent",
+				"value": "50",
+				"type": "Number"
+			},
+			"viewAllLink": {
+				"__TYPE__": "LinkContent",
+				"key": "fd62f5dc-d4ec-416a-a6c8-132e746cd156",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "yesterday"
+				}
+			},
+			"opportunities": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"jobTitle",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading3",
+											"content": {
+												"text": "Remember"
+											}
+										}
+									]
+								}
+							],
+							[
+								"postingDate",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Date",
+									"value": "2015-05-17"
+								}
+							],
+							[
+								"technologies",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "make",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ad pariatur sint cillum dolor mollit quis reprehenderit. Laborum irure deserunt quis reprehenderit mollit pariatur nisi ullamco id amet mollit."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

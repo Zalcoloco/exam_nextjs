@@ -1,0 +1,95 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Breath"
+						}
+					}
+				]
+			},
+			"filter_buttons": {
+				"__TYPE__": "RepeatableContent",
+				"type": "Link",
+				"value": [
+					{
+						"__TYPE__": "LinkContent",
+						"key": "e0b6ec14-807a-499f-8800-81b37561354c",
+						"value": {
+							"__TYPE__": "ExternalLink",
+							"url": "http://google.com",
+							"text": "drew"
+						}
+					}
+				]
+			},
+			"job_cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"job_title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading2",
+											"content": {
+												"text": "Shirt"
+											}
+										}
+									]
+								}
+							],
+							[
+								"job_reference",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "is",
+									"type": "Text"
+								}
+							],
+							[
+								"technologies",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Magna eiusmod reprehenderit esse aliqua ipsum ullamco aute proident ex incididunt exercitation nisi. Irure voluptate tempor pariatur eiusmod incididunt labore sit nulla laborum. Deserunt ipsum occaecat pariatur excepteur culpa reprehenderit commodo deserunt incididunt qui quis nisi velit."
+											}
+										}
+									]
+								}
+							],
+							[
+								"job_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Consequat occaecat aute officia excepteur cupidatat laborum irure. Consequat quis duis cillum laborum enim aliquip occaecat consequat sint aliquip anim nostrud do."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

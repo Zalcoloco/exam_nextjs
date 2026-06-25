@@ -1,0 +1,69 @@
+{
+  "id": "job_board",
+  "type": "SharedSlice",
+  "name": "JobBoard",
+  "description": "A job listings section with title, filter buttons, and a grid of job cards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation with job listings",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "single": "heading1"
+          }
+        },
+        "filter_buttons": {
+          "type": "Link",
+          "config": {
+            "label": "Filter Buttons",
+            "allowText": true,
+            "repeat": true,
+            "select": "web"
+          }
+        },
+        "job_cards": {
+          "type": "Group",
+          "config": {
+            "label": "Job Cards",
+            "fields": {
+              "job_title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Job Title",
+                  "single": "heading2"
+                }
+              },
+              "job_reference": {
+                "type": "Text",
+                "config": {
+                  "label": "Job Reference"
+                }
+              },
+              "technologies": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Technologies",
+                  "single": "paragraph"
+                }
+              },
+              "job_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Job Description",
+                  "single": "paragraph"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
