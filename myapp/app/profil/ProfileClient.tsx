@@ -42,7 +42,7 @@ export default function ProfileClient({ jobs }: Props) {
           {pinnedJobs.map((job) => (
             <article key={job.uid}>
               <h2>{job.title}</h2>
-              <Link href={job.url}>Voir l&apos;offre</Link>
+              <Link href={job.url}>Voir l'offre</Link>
             </article>
           ))}
         </div>
