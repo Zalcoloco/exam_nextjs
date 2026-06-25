@@ -33,7 +33,7 @@ export default function PinButton({ uid }: Props) {
       type="button"
       onClick={togglePinnedOffer}
     >
-      <Image src="/save.svg" alt="" width={24} height={24} />
+      <Image src="/save.svg" alt="" width={24} height={24} style={{cursor: "pointer"}} />
     </button>
   );
 }

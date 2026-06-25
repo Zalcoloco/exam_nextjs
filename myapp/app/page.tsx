@@ -9,7 +9,9 @@ export default function Home() {
           <Link href="/">
             <Image src="/logo.svg" alt="DEV" width={95} height={24} priority />
           </Link>
-          <Link href="/profil">Profil</Link>
+          <Link href="/profil">
+            <Image src="/login.svg" alt="Profil" width={24} height={24} />
+          </Link>
         </nav>
       </header>
 
