@@ -49,7 +49,7 @@ export default async function Home() {
                   <h3>{title || "Offre sans titre"}</h3>
                   <p>{technologies}</p>
                   <Link href={job.url ?? `/offres/${job.uid}`}>
-                    Voir l'offre
+                    Voir l&apos;offre
                   </Link>
                 </article>
               );
